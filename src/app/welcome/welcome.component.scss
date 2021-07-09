@@ -1,0 +1,46 @@
+.welcome-div {
+    background-color: white;
+    color: black;
+    margin: 0;
+    text-align: center;
+}
+
+.welcome-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    width: 70%;
+}
+
+.introduction {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    width: 70%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.connect-icon {
+    padding: 16px;
+    max-height: 64px;
+    max-width: 64px;
+}
+
+.linkedin {
+    filter: invert(0.5);
+}
+
+.github {
+    filter: invert(0.5);
+}
+
+.resume {
+    filter: invert(0.5);
+}

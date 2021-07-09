@@ -1,0 +1,59 @@
+.experience-div {
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 16px;
+}
+
+.experience {
+    padding: 16px;
+}
+
+.experience-card {
+    margin: auto;
+    width: 70%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    padding: 8px;
+    width: 50%;
+}
+
+.google-icon {
+    margin-left: auto;
+    max-width: 256px;
+    max-height: 256px;
+}
+
+.datamaxx-icon {
+    filter: invert(0.5);
+    margin: auto 0 auto auto;
+}
+
+.hosthoarders-icon {
+    margin: auto 0 auto auto;
+    max-width: 256px;
+    max-height: 256px;
+}
+
+.bluevm-icon {
+    margin: auto 0 auto auto;
+    max-width: 256px;
+    max-height: 256px;
+}
+
+.disclaimer-text {
+    text-align: center;
+    padding-top: 16px;
+}
