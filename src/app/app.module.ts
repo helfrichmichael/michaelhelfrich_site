@@ -10,6 +10,9 @@ import { EducationComponent } from './education/education.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { OutreachComponent } from './outreach/outreach.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { AppRoutingModule } from './app-routing.module';
     ExperienceComponent,
     EducationComponent,
     ToolbarComponent,
-    FooterComponent
+    FooterComponent,
+    PortfolioComponent,
+    OutreachComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
