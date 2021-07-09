@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppModule } from '../app.module';
 
 import { ResumeComponent } from './resume.component';
 
@@ -8,9 +9,14 @@ describe('ResumeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResumeComponent ]
+      declarations: [
+        ResumeComponent,
+      ],
+      imports: [
+        AppModule,
+      ],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +25,9 @@ describe('ResumeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should render with PDF object', () => {
+    const compiled = fixture.nativeElement;
+
+    expect(compiled.querySelector('object')).toBeTruthy();
   });
 });
