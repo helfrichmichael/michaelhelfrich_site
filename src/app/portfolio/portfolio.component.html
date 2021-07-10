@@ -2,8 +2,8 @@
     <div class="portfolio">
         <mat-card class="portfolio-card">
             <mat-card-title>Shoutcast Administration Panel</mat-card-title>
-            <div class="row">
-                <div class="column">
+            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap="16px">
+                <div fxLayout="column" fxFlex="50%">
                     <p>
                         Shoutcast is one of the most popular options for internet radio broadcasting. Developed years ago by Nullsoft, the project still lives on 
                         as a standard in Internet Radio Broadcasting. I developed this administration panel in a few days using PHP. It runs on the CodeIgniter Framework 
@@ -19,17 +19,20 @@
                         <li>Automated restarts for any servers that lose connection</li>
                     </ul>
                 </div>
-                <div class="column">
-                    <img src="http://michaelhelfrich.com/wp-content/uploads/2014/10/ShoutcastAdmin.png">
+                <div fxLayout="column" fxLayout.xs="row" fxFlex="50%">
+                    <img src="http://michaelhelfrich.com/wp-content/uploads/2014/10/ShoutcastAdmin.png"
+                         aria-label="Screenshot of the admin page of the Shoutcast Administration Panel"
+                         fxFill>
                 </div>
-            </div>
+            </mat-card-content>
         </mat-card>
     </div>
+    
     <div class="portfolio">
         <mat-card class="portfolio-card">
             <mat-card-title>SHRTN.PW</mat-card-title>
-            <div class="row">
-                <div class="column">
+            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap="16px">
+                <div fxLayout="column" fxFlex="50%">
                     <p>
                         SHRTN was developed while taking a PHP development class at FSU. It was designed to be a very 
                         easy-to-use and simple URL Shortener developed completely in PHP. It made use of the CodeIgniter 
@@ -37,50 +40,56 @@
                         but it was a great learning experience.
                     </p>
                 </div>
-                <div class="column">
-                    <img src="http://michaelhelfrich.com/wp-content/uploads/2014/10/SHRTN.png">
+                <div fxLayout="column" fxLayout.xs="row" fxFlex="50%">
+                    <img src="http://michaelhelfrich.com/wp-content/uploads/2014/10/SHRTN.png" 
+                            aria-label="Screenshot of the interface for SHRTN.pw"
+                            fxFill>
                 </div>
-            </div>
+            </mat-card-content>
         </mat-card>
     </div>
+
     <div class="portfolio">
-        <mat-card class="portfolio-card">
-            <mat-card-title>Raspberry Pi Video Series</mat-card-title>
-            <div class="row">
-                <div class="column">
-                    <p>
-                        In August 2014, I started my DIS (Directed Independent Study) on Raspberry Pi's. The primary
-                        purpose of this DIS was to show the uses of Raspberry Pi's and how they can be used for a 
-                        ton of different projects/solutions. The project focuses on short videos that give an in-depth 
-                        tutorial to doing certain projects.
-                    </p>
-                    <strong>Video Topics:</strong>
-                    <ul>
-                        <li>Overview</li>
-                        <li>Installing Raspbian</li>
-                        <li>Installing RaspBMC</li>
-                        <li>Setting up Motion (Live Camera Monitoring)</li>
-                        <li>Creating a Samba Share on the Raspberry Pi</li>
-                        <li>Setting up a LAMP stack (Web server for hosting a site)</li>
-                    </ul>
-                    <strong>Click the image to view the video series!</strong>
-                </div>
-                <div class="column">
-                    <a href="https://www.youtube.com/watch?v=qx0JwD0oWzg" 
-                       aria-label="Play the Raspberry Pi video series on YouTube in a new tab"
-                       target="_blank">
-                        <img src="http://michaelhelfrich.com/wp-content/uploads/2014/10/RaspberryPi_DIS.jpg"
-                             aria-label="Screenshot of Raspberry Pi video series">
-                    </a>
-                </div>
+    <mat-card class="portfolio-card">
+        <mat-card-title>Raspberry Pi Video Series</mat-card-title>          
+        <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap="16px">
+            <div fxLayout="column" fxFlex="50%">
+                <p>
+                    In August 2014, I started my DIS (Directed Independent Study) on Raspberry Pi's. The primary
+                    purpose of this DIS was to show the uses of Raspberry Pi's and how they can be used for a 
+                    ton of different projects/solutions. The project focuses on short videos that give an in-depth 
+                    tutorial to doing certain projects.
+                </p>
+                <strong>Video Topics:</strong>
+                <ul>
+                    <li>Overview</li>
+                    <li>Installing Raspbian</li>
+                    <li>Installing RaspBMC</li>
+                    <li>Setting up Motion (Live Camera Monitoring)</li>
+                    <li>Creating a Samba Share on the Raspberry Pi</li>
+                    <li>Setting up a LAMP stack (Web server for hosting a site)</li>
+                </ul>
+                <strong>Click the image to view the video series!</strong>
             </div>
-        </mat-card>
+            <div fxLayout="column" fxLayout.xs="row" fxFlex="50%"> 
+                <a href="https://www.youtube.com/watch?v=qx0JwD0oWzg" 
+                   aria-label="Play the Raspberry Pi video series on YouTube in a new tab"
+                   target="_blank">
+                    <img src="http://michaelhelfrich.com/wp-content/uploads/2014/10/RaspberryPi_DIS.jpg"
+                         aria-label="Screenshot of Raspberry Pi video series" 
+                         fxFill>
+                </a>
+            </div>
+        </mat-card-content>
+    </mat-card>
     </div>
+
+    
     <div class="portfolio">
         <mat-card class="portfolio-card">
             <mat-card-title>HostHoarders</mat-card-title>
-            <div class="row">
-                <div class="column">
+            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap="16px">
+                <div fxLayout="column" fxFlex="50%">
                     <p>
                         In January 2012, I started my web hosting company, HostHoarders. The intended plan originally
                         was to provide affordable and maintained web hosting in the Tampa and Tallahassee area. Eventually 
@@ -101,11 +110,12 @@
                         <li>1Gbps connection</li>
                     </ul>
                 </div>
-                <div class="column">
+                <div fxLayout="column" fxLayout.xs="row" fxFlex="50%">
                     <img src="http://michaelhelfrich.com/wp-content/uploads/2014/12/HostHoarders-Quality-hosting-at-a-fraction-of-the-cost....png" 
-                         aria-label="Screenshot of HostHoarders landing page">
+                         aria-label="Screenshot of HostHoarders landing page"
+                         fxFill>
                 </div>
-            </div>
+            </mat-card-content>
         </mat-card>
     </div>
 </div>
