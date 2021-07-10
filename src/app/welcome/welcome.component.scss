@@ -44,3 +44,14 @@
 .resume {
     filter: invert(0.5);
 }
+
+.skill-chips {
+    margin: auto;
+    padding: 16px;
+    width: 70%;
+}
+
+// Make the skill chips center themselves on the page.
+::ng-deep .mat-chip-list-wrapper {
+    justify-content: center !important;
+}
