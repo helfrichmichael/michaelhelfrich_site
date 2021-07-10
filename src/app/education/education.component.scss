@@ -13,18 +13,3 @@
     margin: auto;
     width: 70%;
 }
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    padding: 8px;
-    width: 50%;
-}

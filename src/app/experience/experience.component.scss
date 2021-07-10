@@ -14,22 +14,6 @@
     width: 70%;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    padding: 8px;
-    width: 50%;
-}
-
 .google-icon {
     margin-left: auto;
     max-width: 256px;
@@ -55,9 +39,4 @@
     max-width: 256px;
     max-height: 256px;
     overflow: hidden;
-}
-
-.disclaimer-text {
-    text-align: center;
-    padding-top: 16px;
 }
