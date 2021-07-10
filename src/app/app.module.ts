@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -21,7 +20,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     WelcomeComponent,
     ExperienceComponent,
     EducationComponent,
-    ToolbarComponent,
     FooterComponent,
     PortfolioComponent,
     OutreachComponent,

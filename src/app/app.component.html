@@ -1,3 +1,38 @@
-<app-toolbar></app-toolbar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="app-styling">
+    <!-- Medium and larger screen rendering is done below. -->
+    <div fxShow="true" fxHide.lt-md="true">
+        <div class="logo" >
+            <img src="assets/logo.png" 
+                alt="Michael Helfrich's website logo">
+        </div>
+        <mat-toolbar class="navigation-toolbar" fxShow="true" fxHide.lt-md="true">
+                <button mat-button *ngFor="let route of routes" [routerLink]="route.path" routerLinkActive="mat-accent">
+                    {{ route.data!.routeName! }}
+                </button>
+        </mat-toolbar>
+    </div>
+
+    <!-- Small screen toolbar rendering is done below. -->
+    <mat-toolbar fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Michael Helfrich</span>
+    </mat-toolbar>
+  
+    <!-- This is where all of the app will be rendered primarily. -->
+    <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav fxLayout="column">
+        <div fxLayout="column">
+            <button mat-button *ngFor="let route of routes" [routerLink]="route.path" routerLinkActive="mat-accent">
+                {{ route.data!.routeName! }}
+            </button>
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>
+          <!-- This is where all of the apps content should go to ensure it's rendered on mobile devices and smaller screens. -->
+          <router-outlet></router-outlet>
+          <app-footer></app-footer>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

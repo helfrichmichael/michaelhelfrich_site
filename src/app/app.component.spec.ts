@@ -36,7 +36,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const compiled = fixture.nativeElement;
 
-    expect(compiled.querySelector('app-toolbar')).toBeTruthy();
+    expect(compiled.querySelector('mat-toolbar')).toBeTruthy();
     expect(compiled.querySelector('router-outlet')).toBeTruthy();
     expect(compiled.querySelector('app-footer')).toBeTruthy();
   });  
