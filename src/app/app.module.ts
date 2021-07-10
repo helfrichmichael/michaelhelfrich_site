@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { OutreachComponent } from './outreach/outreach.component';
 import { ResumeComponent } from './resume/resume.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ResumeComponent } from './resume/resume.component';
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
