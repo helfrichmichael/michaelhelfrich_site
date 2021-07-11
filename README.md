@@ -1,27 +1,19 @@
-# Michaelhelfrich
+# MichaelHelfrich.com's Code Base
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
-## Development server
+## Background
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This website was a full Angular adaptation of my original college website that was built in WordPress. Over the years, 
+I've become less and less thrilled with maintaining the website and additionally the security risks it has with a 
+database, etc (the internet is a dangerous place). 
 
-## Code scaffolding
+## Plans
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+My hope is to maintain this simple Angular application, a blog (at some point), and share my latest work on this site.
 
-## Build
+## Automation currently
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Currently, I have Cloudflare Pages building, deploying, and serving the content on every push to GitHub for www.michaelhelfrich.com.
+So far, this process has been incredibly effective and efficient. Read more on that 
+[here](https://developers.cloudflare.com/pages/framework-guides/deploy-an-angular-application).
