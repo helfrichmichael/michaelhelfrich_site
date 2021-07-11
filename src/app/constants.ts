@@ -15,6 +15,6 @@ export const ROUTES: Routes = [
   { path: 'portfolio', component: PortfolioComponent, data: { routeName: 'Portfolio' } },
   { path: 'outreach', component: OutreachComponent, data: { routeName: 'Outreach' } },
   { path: 'resume', component: ResumeComponent, data: { routeName: 'Résumé' } },
-  { path: '**', component: NotFoundComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: NotFoundComponent },
 ];
