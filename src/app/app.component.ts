@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Event, NavigationCancel, NavigationError, NavigationStart, NavigationEnd, Router, Routes } from '@angular/router';
-import { filter, map } from 'rxjs/operators';
+import { takeUntil } from 'rxjs/operators';
+import { ReplaySubject } from 'rxjs';
 
-import {ROUTES} from './constants';
+import { ROUTES } from './constants';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
+  private destroyed: ReplaySubject<boolean> = new ReplaySubject(1);
   loading = false;
   routes: Routes = [];
 
@@ -33,7 +35,7 @@ export class AppComponent implements OnInit {
 
     // Listen to each of the events and set the page title and also show a 
     // loading bar as needed.
-    this.router.events.subscribe((event: Event) => {
+    this.router.events.pipe(takeUntil(this.destroyed)).subscribe((event: Event) => {
       switch (true) {
         case event instanceof NavigationStart: {
           this.loading = true;
@@ -64,6 +66,11 @@ export class AppComponent implements OnInit {
         }
       }
     });
+  }
+
+  ngOnDestroy() {
+    this.destroyed.next(true);
+    this.destroyed.complete();
   }
 
 }
