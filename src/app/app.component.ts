@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute, NavigationEnd, Router, Routes } from '@angular/router';
+import { ActivatedRoute, Event, NavigationCancel, NavigationError, NavigationStart, NavigationEnd, Router, Routes } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 
 import {ROUTES} from './constants';
@@ -11,6 +11,7 @@ import {ROUTES} from './constants';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  loading = false;
   routes: Routes = [];
 
   constructor(
@@ -30,26 +31,39 @@ export class AppComponent implements OnInit {
     const siteName = 'Michael Helfrich';
     this.title.setTitle(siteName);
 
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
-      map(() => {
-        let child = this.activatedRoute.firstChild;
-
-        if (!child) {
-          return this.activatedRoute.snapshot.data.routeName || siteName;
+    // Listen to each of the events and set the page title and also show a 
+    // loading bar as needed.
+    this.router.events.subscribe((event: Event) => {
+      switch (true) {
+        case event instanceof NavigationStart: {
+          this.loading = true;
+          break;
         }
+        case event instanceof NavigationEnd: {
+          let child = this.activatedRoute.firstChild;
 
-        while (child.firstChild) {
-          child = child.firstChild;
-        }
+          while (child!.firstChild) {
+            child = child!.firstChild;
+          }
 
-        if (child && child.snapshot.data.routeName) {
-          return `${siteName} - ${child.snapshot.data.routeName}`
-        } else {
-          return siteName;
+          if (child && child.snapshot.data.routeName) {
+            this.title.setTitle(`${siteName} - ${child.snapshot.data.routeName}`);
+          } else {
+            this.title.setTitle(siteName);
+          }
+          this.loading = false;
+          break;
         }
-      })
-    ).subscribe((title: string) => this.title.setTitle(title));
+        case event instanceof NavigationCancel:
+        case event instanceof NavigationError: {
+          this.loading = false;
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    });
   }
 
 }

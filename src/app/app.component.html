@@ -10,6 +10,7 @@
                     {{ route.data!.routeName! }}
                 </button>
         </mat-toolbar>
+        <mat-progress-bar mode="indeterminate" fxShow="true" fxHide.lt-md="true" *ngIf="loading"></mat-progress-bar>
     </div>
 
     <!-- Small screen toolbar rendering is done below. -->
