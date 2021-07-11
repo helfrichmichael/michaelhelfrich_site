@@ -13,6 +13,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { OutreachComponent } from './outreach/outreach.component';
 import { ResumeComponent } from './resume/resume.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FooterComponent,
     PortfolioComponent,
     OutreachComponent,
-    ResumeComponent
+    ResumeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
