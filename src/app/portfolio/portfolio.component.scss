@@ -9,8 +9,8 @@
     margin: auto;
     padding: 16px;
     width: 70%;
-}
-
-.no-overflow-img {
-    overflow: hidden;
+    img {
+        overflow: hidden;
+        padding: 32px;
+    }
 }
