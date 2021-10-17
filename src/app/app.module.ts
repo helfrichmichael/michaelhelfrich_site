@@ -15,6 +15,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LazyImgLoaderDirective } from './lazy_img_loader.directive';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LazyImgLoaderDirective } from './lazy_img_loader.directive';
     OutreachComponent,
     ResumeComponent,
     NotFoundComponent,
-    LazyImgLoaderDirective
+    LazyImgLoaderDirective,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
