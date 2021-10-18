@@ -20,3 +20,31 @@ export const ROUTES: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];
+
+export declare interface MediumPostListResponse {
+  status: string;
+  feed: MediumPostFeedResponse;
+  items: MediumPostItemResponse[];
+}
+
+export declare interface MediumPostItemResponse {
+  author: string;
+  categories: string[];
+  content: string;
+  description: string;
+  enclosure: {};
+  guid: string;
+  link: string;
+  pubDate: string;
+  thumbnail?: string;
+  title: string;
+}
+
+export declare interface MediumPostFeedResponse {
+  author: string;
+  description: string;
+  image: string;
+  link: string;
+  title: string;
+  url: string;
+}

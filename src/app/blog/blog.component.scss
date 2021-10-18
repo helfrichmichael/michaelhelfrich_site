@@ -10,3 +10,22 @@
     padding: 16px;
     width: 70%;
 }
+
+.post-card {
+    margin: 16px;
+    max-width: 400px;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.view-more-button {
+    button {
+        margin:16px auto;
+        display:block;
+    }
+}

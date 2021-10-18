@@ -16,6 +16,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LazyImgLoaderDirective } from './lazy_img_loader.directive';
 import { BlogComponent } from './blog/blog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BlogComponent } from './blog/blog.component';
     MaterialModule,
     AppRoutingModule,
     FlexLayoutModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
