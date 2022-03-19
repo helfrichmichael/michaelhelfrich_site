@@ -9,11 +9,16 @@ import { ReplaySubject, takeUntil } from 'rxjs';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnDestroy, OnInit {
+  // Used for handling the potential states and outputs of the Medium API response.
+  loading = true;
+  error?: Error;
+
+  blogUrl = 'https://michaelhelfrich.medium.com';
   mediumPosts?: MediumPostItemResponse[];
   thumbnailUrl?: string;
   destroyed: ReplaySubject<boolean> = new ReplaySubject(1);
 
-  constructor(private readonly mediumApi: MediumApiService) { }
+  constructor(private readonly mediumApi: MediumApiService) {}
 
   ngOnInit() {
     // Grabs the posts and then checks that the URL contains a valid file type for the thumbnail. 
@@ -25,7 +30,12 @@ export class BlogComponent implements OnDestroy, OnInit {
         }
         return item;
       });
+      this.loading = false;
       this.thumbnailUrl = response.feed.image;
+    }, (error) => {
+      console.error('Failed to retrieve blog posts: ', error);
+      this.loading = false;
+      this.error = error;
     });
   }
 
@@ -39,8 +49,8 @@ export class BlogComponent implements OnDestroy, OnInit {
     window.open(postUrl, '_blank');
   }
 
-  /** Opens my Medium page. */
+  /** Opens my Medium page in a new tab/window. */
   openMediumPage() {
-    window.open('https://michaelhelfrich.medium.com', '_blank');
+    window.open(this.blogUrl, '_blank');
   }
 }

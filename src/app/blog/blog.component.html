@@ -1,7 +1,7 @@
 <div class="blog-div">
     <div class="blog">
         <h1>Blog</h1>
-        <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" *ngIf="!loading && !error">
             <mat-card class="post-card" *ngFor="let post of mediumPosts">
                 <mat-card-header>
                     <div mat-card-avatar><img class="avatar" [src]="thumbnailUrl"></div>
@@ -18,8 +18,24 @@
                 </mat-card-actions>
             </mat-card>
         </div>
-        <div class="view-more-button">
+        <div class="view-more-button" *ngIf="!loading && !error">
             <button mat-raised-button color="primary" (click)="openMediumPage()">View more posts</button>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="center center center" *ngIf="loading && !error">
+            <mat-progress-spinner mode="indeterminate" aria-label="Loading the blog posts...">
+            </mat-progress-spinner>
+        </div>
+        <div *ngIf="!loading && error">
+           <p>
+               Uh oh! Something went wrong when retrieving the blog posts. The error has been shown 
+                elow and in the console.
+            </p> 
+
+            <pre>{{error | json}}</pre>
+
+            <p>
+                In the meantime, you can visit my blog on Medium <a [href]="blogUrl" target="_blank">here</a>.
+            </p>
         </div>
     </div>
 </div>
