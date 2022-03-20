@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MediumPostItemResponse } from '../constants';
+import { MediumPostItemResponse, BLOG_URL } from '../constants';
 import { MediumApiService } from '../medium-api.service';
 import { ReplaySubject, takeUntil } from 'rxjs';
 
@@ -13,7 +13,7 @@ export class BlogComponent implements OnDestroy, OnInit {
   loading = true;
   error?: Error;
 
-  blogUrl = 'https://michaelhelfrich.medium.com';
+  blogUrl = BLOG_URL;
   mediumPosts?: MediumPostItemResponse[];
   thumbnailUrl?: string;
   destroyed: ReplaySubject<boolean> = new ReplaySubject(1);

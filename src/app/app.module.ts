@@ -17,6 +17,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LazyImgLoaderDirective } from './lazy_img_loader.directive';
 import { BlogComponent } from './blog/blog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GitHubProjectsComponent } from './github-projects/github-projects.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     NotFoundComponent,
     LazyImgLoaderDirective,
     BlogComponent,
+    GitHubProjectsComponent,
   ],
   imports: [
     BrowserModule,
