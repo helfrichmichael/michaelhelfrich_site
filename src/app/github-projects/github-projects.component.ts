@@ -19,7 +19,7 @@ export class GitHubProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.gitHub.getRepositories().pipe(takeUntil(this.destroyed)).subscribe(result => {
-      this.gitHubProjects = result;
+      this.gitHubProjects = result.sort((a, b) => a.name.localeCompare(b.name));
       this.loading = false;
     }, (error) => {
       console.error('Failed to retrieve GitHub Projects: ', error);
