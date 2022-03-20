@@ -16,3 +16,10 @@
         padding: 32px;
     }
 }
+
+// Mobile specific CSS.
+@media only screen and (max-width: 600px) {
+    .education {
+        width: 90%;
+    }
+}

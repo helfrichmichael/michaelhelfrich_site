@@ -16,3 +16,10 @@
     font-size: 128px;
     line-height: 128px;
 }
+
+// Mobile specific CSS.
+@media only screen and (max-width: 600px) {
+    .not-found {
+        width: 90%;
+    }
+}

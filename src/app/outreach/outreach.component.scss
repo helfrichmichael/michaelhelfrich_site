@@ -10,3 +10,10 @@
     padding: 16px;
     width: 70%;
 }
+
+// Mobile specific CSS.
+@media only screen and (max-width: 600px) {
+    .outreach {
+        width: 90%;
+    }
+}

@@ -40,3 +40,10 @@
     max-height: 256px;
     overflow: hidden;
 }
+
+// Mobile specific CSS.
+@media only screen and (max-width: 600px) {
+    .experience {
+        width: 90%;
+    }
+}
