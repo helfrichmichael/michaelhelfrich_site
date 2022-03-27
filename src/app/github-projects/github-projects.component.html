@@ -4,8 +4,10 @@
         <div fxLayout="row wrap" fxLayoutAlign="space-between center" *ngIf="!loading && !error">
             <mat-list>
                 <a mat-list-item *ngFor="let project of gitHubProjects" [href]="project.html_url" target="_blank">
-                    <mat-icon mat-list-icon>source</mat-icon>
-                    <div mat-line>{{project.name}}</div>
+                    <mat-icon mat-list-icon *ngIf="!project.fork">source</mat-icon>
+                    <div mat-line *ngIf="!project.fork">{{project.name}}</div>
+                    <mat-icon mat-list-icon *ngIf="project.fork">alt_route</mat-icon>
+                    <div mat-line *ngIf="project.fork">Fork of {{project.name}}</div>
                     <div mat-line>{{project.description ? project.description : 'No description available'}}</div>
                     <div mat-line>Last updated: {{project.pushed_at | date}} </div>
                 </a>
