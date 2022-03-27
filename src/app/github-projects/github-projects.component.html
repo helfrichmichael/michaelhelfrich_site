@@ -7,7 +7,7 @@
                     <mat-icon mat-list-icon *ngIf="!project.fork">source</mat-icon>
                     <div mat-line *ngIf="!project.fork">{{project.name}}</div>
                     <mat-icon mat-list-icon *ngIf="project.fork">alt_route</mat-icon>
-                    <div mat-line *ngIf="project.fork">Fork of {{project.name}}</div>
+                    <div mat-line *ngIf="project.fork">{{project.name}} (Forked)</div>
                     <div mat-line>{{project.description ? project.description : 'No description available'}}</div>
                     <div mat-line>Last updated: {{project.pushed_at | date}} </div>
                 </a>
